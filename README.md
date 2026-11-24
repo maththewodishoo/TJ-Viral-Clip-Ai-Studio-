@@ -12,7 +12,7 @@ Built with **React + TypeScript + Vite + Tailwind CSS**, with an optional **Clou
 
 | Area | Status | Requires |
 | --- | --- | --- |
-| Dashboard, stats, charts, navigation | Working — computed from your saved records | Nothing |
+| Dashboard, stats, charts, navigation | Working — computed from your saved records; 17 routes browser-tested | Nothing |
 | Video URL validation + platform detection | Working | Nothing |
 | Public metadata lookup (title, thumbnail, author) | Implemented — oEmbed; endpoint verified, in-app flow not browser-driven | Internet |
 | Transcription | Working — files up to 25 MB sent to your provider | AI key (Gemini or Groq recommended) |
@@ -36,6 +36,7 @@ bun run dev          # http://localhost:3000 (Freebuff preview manages this)
 bun run test         # 49 unit + render tests
 bun run typecheck    # TypeScript project references
 bun run build        # static production build in dist/
+bun run test:ui      # browser smoke + layout checks (preview must be running)
 ```
 
 ### Connect a free AI key
@@ -101,7 +102,7 @@ See [OPEN_SOURCE_CREDITS.md](OPEN_SOURCE_CREDITS.md). The app is built on MIT/IS
 
 ## Limitations
 
-- The reference-inspired dashboard is an original implementation, not a pixel copy; artwork is hand-built SVG.
+- The reference-inspired dashboard is an original implementation, not a pixel copy; artwork is hand-built SVG. Layout geometry was browser-measured, but a pixel-level visual review by the owner is still outstanding (the build host cannot display images).
 - Multi-device sync, accounts and team isolation require the optional Worker plus an auth layer (not included).
 - Clip MP4 rendering and automated publishing require infrastructure this repository documents but does not host.
 - AI quality, quotas, model access and pricing are controlled by each provider and can change.

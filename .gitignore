@@ -37,6 +37,7 @@ pnpm-debug.log*
 
 # Test output
 coverage/
+tmp-screens/
 *.tsbuildinfo
 
 # Local media uploads

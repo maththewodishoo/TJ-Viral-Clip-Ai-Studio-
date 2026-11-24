@@ -141,3 +141,16 @@
 .pb-safe {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
+
+/*
+ * Dense dashboard metadata uses 8–9.5px utility sizes on desktop.
+ * On phones that is below a comfortable reading size, so raise the floor
+ * without changing the desktop composition.
+ */
+@media (max-width: 640px) {
+  main [class*="text-[8"],
+  main [class*="text-[9"] {
+    font-size: 10.5px;
+    line-height: 1.35;
+  }
+}
