@@ -1,0 +1,43 @@
+{
+  "name": "tj-viral-clip-ai-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "TJ Viral Clip AI Studio — build, analyse, recreate, go viral.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -b --noEmit",
+    "worker:dev": "wrangler dev worker/index.ts",
+    "worker:deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply tj_viral_clip_studio --remote"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.462.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "tailwind-merge": "^2.5.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^22",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "jsdom": "^31.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8",
+    "wrangler": "^3"
+  }
+}
